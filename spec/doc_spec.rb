@@ -27,7 +27,7 @@ RSpec.describe SnapRat do
 
     # create a file in the dir
     `touch #{directory}/tmpfile`
-    expect(SnapRat.contents directory).to eq ['tmp/tmpfile']
+    expect(SnapRat.contents directory).to eq ['tmpfile']
 
     # cleanup
     `rm #{directory}/*`

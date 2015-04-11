@@ -6,7 +6,7 @@ class SnapRat
 
   class << self
     def contents dir
-      Dir["#{dir}/**"]
+      Dir.entries(dir)  - ['.', '..']
     end
 
     def gettime file
