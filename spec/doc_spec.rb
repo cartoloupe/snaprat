@@ -39,5 +39,11 @@ RSpec.describe SnapRat do
     expect(SnapRat.target_directory(file)).to eq '2015/04/10'
   end
 
+  xit 'copies files into directory structure of year/month/day' do
+    SnapRat.copy!(file)
+    expect(SnapRat.contents '2015/04/10').to eq [file]
+  end
+
+
 
 end
